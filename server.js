@@ -3,6 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 4000;
 const app = express();
 
 
@@ -55,6 +56,6 @@ app.get('/bad', (req, res) => {
 	})
 })
 
-app.listen(4000, () => {
-	console.log('Server starting in 4000 port')
+app.listen(port, () => {
+	console.log(`Server starting in ${port} port`)
 });
